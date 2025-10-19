@@ -20,11 +20,3 @@ Build:
     -include(":loaders:fabric:1.21.3", ":loaders:fabric:1.21.8")
     +include(":loaders:fabric:1.21.3", ":loaders:fabric:1.21.8", ":loaders:fabric:1.19.1")
     ```
-5. Add new entry to `build.gradle.kts`. For example:
-    ```diff
-    tasks.register("buildAll") {
-        dependsOn(":loaders:fabric:1.21.3:build")
-        dependsOn(":loaders:fabric:1.21.8:build")
-    +   dependsOn(":loaders:fabric:1.19.1:build")
-    }
-    ```
