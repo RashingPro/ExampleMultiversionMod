@@ -1,8 +1,14 @@
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+**/src/main/**/build/
+**/src/test/**/build/
+**/build/
+**/src/**/build/
+src/**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -15,11 +21,21 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
 
 ### Eclipse ###
 .apt_generated
 .classpath
 .factorypath
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
 .project
 .settings
 .springBeans
