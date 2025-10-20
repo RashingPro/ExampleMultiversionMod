@@ -6,9 +6,17 @@ Sync everything up:
 ```shell
 python ./environment/scripts/sync_build_gradle.py
 ```
-Build:
+Build all:
 ```shell
 ./gradlew buildAll
+```
+Build all versions for specific loader:
+```shell
+./gradlew :loaders:<loader>:build
+```
+Build specific version for specific version:
+```shell
+./gradlew :loaders:<loader>:<version>:build
 ```
 
 ## Adding new version
