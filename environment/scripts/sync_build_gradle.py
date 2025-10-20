@@ -24,8 +24,11 @@ def write_build_gradle_gitignore(dir: str):
 
 for loader in os.listdir(loaders_folder):
     loader_folder = path.join(loaders_folder, loader)
+    if not path.isdir(loader_folder): continue
     for version in os.listdir(loader_folder):
         version_folder = path.normpath(path.join(loader_folder, version))
+        if not path.isdir(version_folder): continue
+
         build_gradle_file = path.join(version_folder, "build.gradle.kts")
         write_build_gradle(build_gradle_file, build_gradle_content)
         write_build_gradle_gitignore(version_folder)
